@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ishita Mishra · Aspiring Product Manager</title>
+<meta name="description" content="Portfolio of Ishita Mishra, an Information Science engineering student exploring product discovery, user research and creator-led growth. Case studies: Blinkit and Loop.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#172B4D;--ivory:#FAF8F3;--teal:#2D8C87;--teal-d:#226f6b;--sage:#DCE9E3;--char:#202B38;--lav:#EAE5F5;--line:#e4e0d6;--green:#1f7a3d;
+--head:'DM Sans','Segoe UI',sans-serif;--body:'Inter','Segoe UI',sans-serif;--serif:'DM Serif Display',Georgia,serif}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--ivory);color:var(--char);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h1,h2,h3{font-family:var(--head);color:var(--navy);line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:20px}
+.lead{max-width:62ch;color:#44505e}
+.eyebrow{font:600 .78rem var(--head);letter-spacing:.12em;color:var(--teal-d);margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font:500 .95rem var(--head);text-decoration:none;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}.btn.primary:hover{background:var(--teal-d)}
+.btn.sm{padding:9px 16px;font-size:.88rem}
+.btn[aria-disabled=true]{opacity:.55;cursor:not-allowed;border-style:dashed}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 1.1rem var(--head);color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:10px}
+.av{width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--sage)}
+.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--navy);color:var(--ivory);font:400 1.05rem var(--serif)}
+.links{display:flex;gap:26px;align-items:center;list-style:none;padding:0}
+.links a{text-decoration:none;font:500 .93rem var(--head);color:var(--char)}.links a:hover{color:var(--teal-d)}
+.menu{display:none;background:none;border:1.5px solid var(--navy);border-radius:10px;width:42px;height:42px;cursor:pointer}
+/* hero */
+.hero{padding:64px 0 88px}.hero .wrap{display:grid;grid-template-columns:1fr;max-width:860px}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.2rem);margin-bottom:24px}
+.hero h1 span{display:block;font:400 .62em/1.2 var(--serif);letter-spacing:0;margin-top:12px;color:var(--teal-d)}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.stats div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 18px}
+.stats strong{display:block;font:700 1.35rem var(--head);color:var(--navy)}.stats small{color:#5a6674}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.portrait{position:relative;max-width:400px;margin-left:auto}
+.portrait:before{content:"";position:absolute;inset:28px -22px -22px 28px;background:var(--sage);border-radius:32px}
+.portrait:after{content:"";position:absolute;width:96px;height:96px;border-radius:50%;background:var(--lav);top:-22px;left:-22px}
+.portrait img{position:relative;z-index:1;border-radius:28px;aspect-ratio:4/5;object-fit:cover;width:100%;border:6px solid #fff;box-shadow:0 20px 50px -24px rgba(23,43,77,.5)}
+.tag{position:absolute;z-index:2;left:-26px;bottom:34px;background:var(--navy);color:var(--ivory);padding:11px 16px;border-radius:14px;font:500 .85rem var(--head);max-width:220px}
+.scroll{display:flex;justify-content:center;margin-top:44px;color:var(--teal-d);animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(7px)}}
+/* about */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h3{font-size:1.15rem;margin:12px 0 8px}.card p{font-size:.95rem;color:#4b5766}
+.ico{width:42px;height:42px;border-radius:12px;background:var(--sage);display:grid;place-items:center;color:var(--teal-d)}
+.about p+p{margin-top:14px}
+/* projects */
+#work{background:#fff;border-block:1px solid var(--line)}
+.project{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;border:1px solid var(--line);border-radius:28px;padding:36px;margin-top:36px;background:var(--ivory)}
+.project.blinkit{border-top:5px solid var(--green)}.project.loop{border-top:5px solid var(--navy);background:#fbfaff}
+.cat{font:600 .85rem var(--head);color:var(--teal-d);margin-bottom:8px}.blinkit .cat{color:var(--green)}
+.project h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:8px}
+.sub{font:400 1.2rem/1.4 var(--serif);color:var(--navy);margin-bottom:18px}
+.project dl{margin:18px 0}.project dt{font:700 .85rem var(--head);color:var(--navy);margin-top:12px}.project dd{font-size:.94rem;color:#44505e}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px;list-style:none;padding:0}
+.chips li{font-size:.8rem;padding:4px 12px;border-radius:999px;background:var(--lav)}.blinkit .chips li{background:#e3f1e6}
+.pbtns{display:flex;gap:10px;flex-wrap:wrap}
+.visual{display:grid;gap:14px;align-content:start}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.shot figcaption{font-size:.74rem;padding:7px 10px;color:#5a6674;border-top:1px solid var(--line)}
+.mock{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;font-size:.82rem}
+.mock h4{font:700 .95rem var(--head);color:var(--navy);margin-bottom:2px}.mock .note{font-size:.72rem;color:#6a7480;margin-bottom:10px}
+.alts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.alt{border:1px solid var(--line);border-radius:12px;padding:10px}
+.alt b{display:block;font-family:var(--head)}.pill{display:inline-block;font-size:.68rem;padding:2px 8px;border-radius:99px;background:#e3f1e6;color:var(--green);margin:4px 0;font-weight:600}
+.gap{color:#8a4b00;font-size:.75rem}
+table.cmp{width:100%;border-collapse:collapse;font-size:.78rem}.cmp th,.cmp td{padding:6px 7px;border-bottom:1px solid var(--line);text-align:left}.cmp th{font-family:var(--head);color:var(--navy)}.cmp .best{background:#e3f1e6;font-weight:600}
+.cmp-wrap{overflow-x:auto}
+.warn{margin-top:8px;font-size:.72rem;background:#fff4e0;border-radius:8px;padding:6px 9px}
+.steps{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;font-size:.8rem;background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px 10px}.steps li:before{content:counter(s)". ";color:var(--teal-d);font-weight:700}
+/* experience */
+.tl{margin-top:36px;border-left:2px solid var(--sage);padding-left:28px;display:grid;gap:22px}
+.job{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px}
+.job:before{content:"";position:absolute;left:-37px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--teal);border:3px solid var(--ivory)}
+.job h3{font-size:1.1rem}.job .org{color:var(--teal-d);font-weight:500;font-size:.92rem;margin-bottom:8px}
+.job ul{padding-left:18px;font-size:.93rem;color:#44505e}.skill-note{margin-top:30px;background:var(--lav);padding:18px 22px;border-radius:16px;max-width:760px;font-size:.95rem}
+/* skills */
+#skills{background:#fff;border-block:1px solid var(--line)}
+.sk{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;list-style:none;padding:0}.sk li{padding:5px 13px;border-radius:999px;background:var(--sage);font-size:.85rem}
+.edu{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px;max-width:640px;margin-top:30px}
+.edu strong{font:700 1.8rem var(--head);color:var(--navy)}
+/* contact */
+#contact{background:var(--navy);color:var(--ivory)}#contact h2{color:var(--ivory)}#contact .lead{color:#cdd5e3}
+#contact .btn{border-color:#cdd5e3;color:var(--ivory)}#contact .btn.primary{border-color:var(--teal);background:var(--teal)}
+footer{background:var(--navy);color:#b9c3d6;padding:28px 0 40px;font-size:.9rem;border-top:1px solid #2b4170}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}footer a{text-decoration:none;margin-right:16px}
+/* dialog */
+dialog{width:min(1000px,94vw);height:min(86vh,860px);border:none;border-radius:22px;padding:0;background:var(--ivory);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+dialog::backdrop{background:rgba(23,43,77,.6)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line)}.dh h3{font-size:1.05rem}
+.db{height:calc(100% - 62px);overflow:auto}.db iframe{width:100%;height:100%;border:0}
+.cs{padding:26px 30px;max-width:780px}.cs section{padding:0;margin-bottom:22px}.cs h4{font:700 1.02rem var(--head);color:var(--navy);margin-bottom:4px}.cs p,.cs li{font-size:.95rem;color:#3d4957}.cs ul{padding-left:18px}
+.cs .lbl{display:inline-block;font-size:.7rem;font-weight:700;padding:1px 8px;border-radius:99px;background:var(--lav);margin-right:6px}
+.empty{display:grid;place-items:center;text-align:center;height:100%;padding:30px;color:#4b5766}.empty code{background:#fff;padding:2px 8px;border-radius:6px;border:1px solid var(--line)}
+@media(max-width:900px){.hero .wrap,.project{grid-template-columns:1fr}.portrait{margin:20px auto 0}.cards3{grid-template-columns:1fr}.project{padding:24px}}
+@media(max-width:820px){.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ivory);flex-direction:column;align-items:flex-start;padding:18px 24px;border-bottom:1px solid var(--line)}.links.open{display:flex}section{padding:68px 0}}
+.rv{opacity:0;transform:translateY(14px);transition:.6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Primary">
+<a class="logo" href="#top" aria-label="Ishita Mishra, home"><img class="av" src="assets/photo.jpg" alt="" width="36" height="36">Ishita Mishra</a>
+<button class="menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="links"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<ul class="links" id="links">
+<li><a href="index.html">Home</a></li><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li>
+<li><a href="assets/resume/Ishita_Mishra_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+<li><a class="btn primary sm" href="#contact">Contact</a></li></ul></nav></div></header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:88px"><div class="wrap">
+<div>
+<p class="eyebrow">PRODUCT MANAGEMENT · USER RESEARCH · CREATOR-LED GROWTH</p>
+<h1>Hi, I’m Ishita.<span>I turn user insights into thoughtful product experiences.</span></h1>
+<p class="lead">An Information Science engineering student exploring the intersection of user behaviour, product strategy, and design. I enjoy understanding why people make decisions and translating those insights into better product experiences.</p>
+<div class="stats"><div><strong>9.38</strong><small>CGPA</small></div><div><strong>50K+</strong><small>Instagram followers</small></div><div><strong>6M+</strong><small>monthly views</small></div></div>
+<div class="ctas"><a class="btn primary" href="#work">Explore My Work</a><a class="btn" href="assets/resume/Ishita_Mishra_Resume.pdf" download>Download Resume</a></div>
+</div>
+</div><a class="scroll" href="#about" aria-label="Scroll to About"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a></section>
+
+<section id="about"><div class="wrap about">
+<h2>A little about how I think.</h2>
+<p class="lead">I study Information Science, so I like understanding how things work. I’m drawn to product management because the interesting questions sit with people: what they notice, what they ignore, and why they choose one thing over another.</p>
+<p class="lead">Growing an Instagram audience from scratch taught me about attention, preferences, experimentation and engagement. I checked what people responded to, tried something different, and measured again. That is the same loop I want to bring to product discovery and user-centred decisions. I haven’t held a Product Manager role yet. My product experience comes from self-directed case studies.</p>
+<div class="cards3">
+<article class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Understand the user</h3><p>User interviews, problem discovery, personas, Jobs-to-be-Done, and user journeys.</p></article>
+<article class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h6"/></svg></div><h3>Think in priorities</h3><p>Problem definition, MVP scoping, RICE prioritisation, roadmaps, and product metrics.</p></article>
+<article class="card"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg></div><h3>Build and learn</h3><p>Figma prototypes, product case studies, experimentation, and iterative improvement.</p></article>
+</div></div></section>
+
+<section id="work"><div class="wrap">
+<h2>Selected work</h2><p class="lead">Two self-directed product case studies. Neither is an official product initiative, and no results are claimed. Both end with a plan to validate.</p>
+<div id="projects"></div></div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2><p class="lead">Different settings, one thread: understanding an audience, making things for them, and checking what worked.</p>
+<div class="tl">
+<article class="job"><h3>Content Creator &amp; Brand Influencer</h3><p class="org">Independent · Instagram</p><ul><li>Grew an audience to 50K+ followers organically.</li><li>Reached 6M+ monthly views.</li><li>Used reach and engagement metrics to improve content strategy.</li><li>Collaborated with Flipkart, Shopsy, Newme, Plum, and Veg Beauty.</li><li>Managed creative briefs, content delivery, and deadlines.</li></ul></article>
+<article class="job"><h3>Graphic Designer Intern</h3><p class="org">InAmigos Foundation</p><ul><li>Designed social media creatives, event graphics, and campaign assets.</li></ul></article>
+<article class="job"><h3>Media Team Member</h3><p class="org">ByteXync · college coding club</p><ul><li>Created posters, banners, and promotional content for college events and workshops.</li></ul></article>
+<article class="job"><h3>Tech Team Member</h3><p class="org">OSCode · college coding club</p><ul><li>Collaborated with teammates, contributed ideas, and worked on tasks under deadlines.</li></ul></article>
+</div>
+<p class="skill-note">Skills that carry across: user understanding, clear communication, creative execution, collaboration, and data-informed iteration.</p></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="cards3" style="margin-top:28px">
+<article class="card"><h3>Product management</h3><ul class="sk"><li>Product discovery</li><li>User research</li><li>Problem definition</li><li>Personas</li><li>Jobs-to-be-Done</li><li>Competitive analysis</li><li>PRDs</li><li>User stories</li><li>Acceptance criteria</li><li>RICE prioritisation</li><li>MVP scoping</li><li>Roadmapping</li><li>Agile / Scrum</li><li>Experiment design</li><li>Product metrics</li></ul></article>
+<article class="card"><h3>Design and tools</h3><ul class="sk"><li>Figma</li><li>Wireframing</li><li>Prototyping</li><li>User flows</li><li>Jira</li><li>Excel</li><li>Python</li><li>Graphic design</li><li>Video editing</li></ul></article>
+<article class="card"><h3>Analytics and growth</h3><ul class="sk"><li>North Star metrics</li><li>Funnel analysis</li><li>Content strategy</li><li>Engagement optimisation</li><li>Audience growth</li><li>Brand collaborations</li></ul></article>
+</div>
+<div class="edu"><strong>9.38</strong><div><h3 style="font-size:1.05rem">Dayananda Sagar College of Engineering, Bengaluru</h3><p>Bachelor of Engineering in Information Science · CGPA</p></div></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Have a product problem worth exploring?</h2>
+<p class="lead">I’m interested in Product Management internships, product discovery, and opportunities to learn from teams building thoughtful products.</p>
+<div class="ctas" style="margin-top:30px">
+<a class="btn primary" href="mailto:mishraishita925@gmail.com">Email me</a>
+<a class="btn" href="https://linkedin.com/in/ishitamihsr-24" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://instagram.com/ishhuwithissues" target="_blank" rel="noopener">Instagram @ishhuwithissues</a>
+<a class="btn" href="assets/resume/Ishita_Mishra_Resume.pdf" download>Download Resume</a></div>
+<p style="margin-top:18px;color:#b9c3d6">mishraishita925@gmail.com</p></div></section>
+</main>
+
+<footer><div class="wrap"><p>Ishita Mishra · Built with curiosity and intention.</p>
+<p><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#top">Back to top ↑</a></p></div></footer>
+
+<dialog id="dlg" aria-labelledby="dt"><div class="dh"><h3 id="dt"></h3><button class="btn sm" id="close">Close</button></div><div class="db" id="dbody"></div></dialog>
+
+<script>
+/* ================= EDIT HERE ================= */
+// file: path inside this folder, or null to show an empty state. url: link, or null to disable the button.
+const PROJECTS = [
+{ id:'blinkit', cls:'blinkit', title:'Blinkit — Beyond Out-of-Stock', cat:'Product Management Case Study',
+  sub:'Helping shoppers evaluate replacements, not just find alternatives.',
+  summary:'Explored how price sensitivity influences shoppers’ decisions when an item is out of stock, and tested a concept for comparing substitutes.',
+  problem:'When a wanted item is unavailable, users decide whether to switch apps, accept an alternative or wait. Blinkit already shows related products and “Notify me”, but in the one observed search nothing explained why an item was related or offered a like-for-like price view.',
+  approach:'Five exploratory interviews, a product audit of my own screenshots (26 Oct 2026, one account, one session) and limited desk research. Evidence is kept separate from hypotheses.',
+  tools:['User interviews','Product audit','Opportunity scoring','UX concept design','Metrics plan'],
+  pdf:'assets/presentations/blinkit-case-study.pdf', prototype:null, extra:[],
+  shots:[['assets/screens/blinkit-search.jpg','Slide: proposed search results (concept)'],['assets/screens/blinkit-compare.jpg','Slide: proposed compare view (concept)']],
+  study:[
+   ['Context and problem','Availability is a critical moment in quick commerce. Hypothesis: some users lack enough information to confidently choose a substitute.','Hypothesis'],
+   ['Research approach','Five exploratory interviews on unavailable products, app switching, price sensitivity, urgency and willingness to wait. Limits: five interviews are not representative, and frequency of each behaviour is unknown.','Observed'],
+   ['User insights','Users may switch apps when an item is unavailable. They reported switching when an alternative elsewhere costs less than ₹30 more than on Blinkit, and possibly waiting for a restock when the gap is larger and the item isn’t urgent. The ₹30 figure is a pattern to investigate, not a universal rule.','Interviews'],
+   ['Opportunity definition','Notify and related products already exist, so they were rejected as opportunities. Supported gaps: relevance of alternatives, explanation of equivalence, and price and pack comparability. How might we help users judge, in seconds, whether a related item is a suitable like-for-like replacement?','Audit'],
+   ['Solution exploration','Closest-match labels with unit-price compare scored highest (impact 4, confidence 3, effort 2 = 6.0). Smarter ranking and inventory accuracy scored 2.0. Scores are my judgments, not measurements.','Judgment'],
+   ['Proposed experience','“Closest Matches” with a data-supported reason chip, total price, pack size, unit price and price gap, a Compare action, and Notify kept. Guardrails: reliable attributes only, test in grocery first, never imply medicines are interchangeable.','Concept'],
+   ['Success metrics and validation plan','Primary: immediate out-of-stock recovery rate. Supporting: compare open rate, add rate, notify opt-in, exit rate. Guardrails: returns, satisfaction, unsuitable-substitution reports. A controlled test is to be defined; no uplift is claimed.','Plan'],
+   ['Learnings and next steps','Evidence is limited to five interviews and one captured search. Next: repeat the audit across 3–5 grocery products, then usability-test current vs proposed screens, and refine or reject the concept.','Next']]},
+{ id:'loop', cls:'loop', title:'Loop — Messaging App Concept', cat:'Product Management · Figma · PRD',
+  sub:'Turning important messages into actions without leaving the chat.',
+  summary:'A messenger concept that turns “don’t forget” messages into two-tap reminders and tasks, run end to end as a self-directed case study.',
+  problem:'Important information gets buried in conversations. People understand a message when they read it, then rely on memory or a frantic re-scroll to act on it later.',
+  approach:'Three personas, six Jobs-to-be-Done, a feature-level comparison of WhatsApp, Telegram and Slack, an MVP scoped with RICE (hypothetical inputs), a Now / Next / Later roadmap and a measurement plan.',
+  tools:['Figma','PRD','RICE','Personas','JTBD','Roadmapping'],
+  pdf:'assets/presentations/loop-case-study.pdf', prototype:'https://claude.ai/artifact/U38aweVZu97uvtPQLtTusp', extra:[['PRD', null]],
+  shots:[['assets/screens/loop-aha.jpg','Slide: chat list to Message Actions menu'],['assets/screens/loop-value.jpg','Slide: create reminder and Saved Actions']],
+  study:[
+   ['Context and problem','Messaging is opened dozens of times a day, so a feature inside the thread captures a passing deadline more cheaply than a separate app.','Concept'],
+   ['Discovery','Personas: a student, an early-career analyst and a family organiser. Six Jobs-to-be-Done. Competitive read of WhatsApp, Telegram and Slack is my own hands-on assessment and would need re-verifying.','Concept'],
+   ['Scope','MVP: 1:1 and group chat, Message Actions (Save, Reminder, Task), reminder notifications, search, Saved Actions hub. Deliberately out: events, smart suggestions, AI organisation, integrations. RICE inputs are hypothetical.','Judgment'],
+   ['Experience','Chat → select message → Message Actions → Create Reminder → choose time → save. The “aha” is reachable in two taps. Edge cases mapped: empty state, invalid time, offline save failure, duplicates and deleted source messages.','Design'],
+   ['Metrics','North Star: Weekly Actioned Users. A message-to-action funnel, activation and retention metrics, and notification opt-outs as a guardrail. First experiment: preset vs blank reminder time.','Plan'],
+   ['Roadmap and status','Now / Next / Later, with a gate before each horizon. Not launched and not yet user-tested; all targets are proposals, not results.','Status']]}
+];
+const RESUME='assets/resume/Ishita_Mishra_Resume.pdf';
+/* ============================================ */
+
+const $=(s,r=document)=>r.querySelector(s), esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mockBlinkit=`<div class="mock"><h4>Closest matches</h4><p class="note">Concept preview · illustrative data · not a Blinkit feature</p>
+<div class="alts"><div class="alt"><b>Picspot Gel · 15 g</b><span class="pill">Same ingredient*</span><div>₹304 · ₹20.27/g</div><div class="gap">+₹45 vs original</div></div>
+<div class="alt"><b>Alt B · 15 g</b><span class="pill">Same ingredient*</span><div>₹285 · ₹19.00/g</div><div class="gap">+₹26 vs original</div></div></div>
+<p class="warn">Check suitability with a pharmacist or doctor before changing prescription products. Notify me stays available.</p></div>
+<div class="mock"><h4>Compare alternatives</h4><p class="note">Original: Aziderm 10% Gel, ₹259 (₹17.27/g), out of stock</p><div class="cmp-wrap"><table class="cmp"><tr><th></th><th>Aziderm</th><th>Picspot</th><th>Alt B</th></tr>
+<tr><td>Pack size</td><td>15 g</td><td>15 g</td><td>15 g</td></tr><tr><td>Price</td><td>₹259</td><td>₹304</td><td>₹285</td></tr><tr><td>Per gram</td><td>₹17.27</td><td>₹20.27</td><td class="best">₹19.00</td></tr></table></div></div>`;
+const mockLoop=`<div class="mock"><h4>Message → action in two taps</h4><p class="note">Concept flow</p><ol class="steps"><li>Chat</li><li>Select message</li><li>Message Actions</li><li>Create Reminder</li><li>Choose time</li><li>Save</li><li>Saved Actions</li></ol></div>`;
+
+function btn(label,href,attrs=''){return href?`<a class="btn sm" href="${esc(href)}" ${attrs}>${label}</a>`:`<span class="btn sm" role="link" aria-disabled="true" title="Add this in the PROJECTS config">${label} (not added yet)</span>`}
+$('#projects').innerHTML=PROJECTS.map(p=>`<article class="project ${p.cls} rv" id="${p.id}">
+<div><p class="cat">${esc(p.cat)}</p><h3>${esc(p.title)}</h3><p class="sub">${esc(p.sub)}</p><p>${esc(p.summary)}</p>
+<dl><dt>The problem</dt><dd>${esc(p.problem)}</dd><dt>Approach</dt><dd>${esc(p.approach)}</dd></dl>
+<ul class="chips">${p.tools.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
+<div class="pbtns"><button class="btn primary sm" data-study="${p.id}">Explore Case Study</button>${btn('View PPT',p.pdf,'target="_blank" rel="noopener"')}
+${p.prototype?`<a class="btn sm" href="${esc(p.prototype)}" target="_blank" rel="noopener">View Prototype</a>`:''}
+${p.extra.map(e=>btn(e[0],e[1],'target="_blank" rel="noopener"')).join('')}</div></div>
+<div class="visual"><div class="shots">${p.shots.map(s=>`<figure class="shot"><img src="${s[0]}" alt="${esc(s[1])}" loading="lazy"><figcaption>${esc(s[1])}</figcaption></figure>`).join('')}</div>${p.id==='blinkit'?mockBlinkit:mockLoop}</div></article>`).join('');
+
+const dlg=$('#dlg'),body=$('#dbody');
+function open(title,html){$('#dt').textContent=title;body.innerHTML=html;dlg.showModal();body.scrollTop=0}
+function viewer(p){
+ if(!p.pdf)return `<div class="empty"><div><h4>No presentation added yet</h4><p>Put a PDF in <code>assets/presentations/</code> and set <code>pdf</code> in the PROJECTS config.</p></div></div>`;
+ return `<iframe src="${esc(p.pdf)}#view=FitH" title="${esc(p.title)} presentation"></iframe>`}
+document.addEventListener('click',e=>{
+ const s=e.target.closest('[data-study]'),v=e.target.closest('[data-ppt]');
+ if(s){const p=PROJECTS.find(x=>x.id===s.dataset.study);
+  open(p.title,`<div class="cs">${p.study.map(x=>`<section><h4>${esc(x[0])}</h4><p><span class="lbl">${esc(x[2])}</span>${esc(x[1])}</p></section>`).join('')}
+  <p class="pbtns"><a class="btn sm primary" href="${esc(p.pdf)}" target="_blank" rel="noopener">Open the full presentation</a></p></div>`)}
+ if(v){const p=PROJECTS.find(x=>x.id===v.dataset.ppt);
+  if(dlg.open)dlg.close();
+  open(p.title+' · Presentation',viewer(p)+(p.pdf?`<p style="padding:10px 20px"><a href="${esc(p.pdf)}" target="_blank" rel="noopener">Open PDF in a new tab</a> if it doesn’t display here.</p>`:''))}
+});
+$('#close').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('close',()=>{body.innerHTML=''});
+
+const mb=$('.menu'),ls=$('#links');
+mb.onclick=()=>{const o=ls.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+ls.addEventListener('click',e=>{if(e.target.closest('a')){ls.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

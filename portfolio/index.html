@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ishita Mishra · Home</title>
+
+<meta name="description" content="Ishita Mishra — Product Management, User Research and Creator-led Growth.">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #172B4D;
+  --ivory: #FAF8F3;
+  --teal: #2D8C87;
+  --teal-dark: #226F6B;
+  --sage: #DCE9E3;
+  --lavender: #EAE5F5;
+  --charcoal: #202B38;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font: 16px/1.6 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: auto;
+}
+
+/* Circular portrait */
+.ph {
+  position: relative;
+  width: 210px;
+  aspect-ratio: 1;
+  margin: 0 auto 38px;
+  isolation: isolate;
+}
+
+.ph::before {
+  content: "";
+  position: absolute;
+  inset: 12px -12px -8px 12px;
+  border-radius: 50%;
+  background: var(--sage);
+  z-index: -1;
+}
+
+.ph::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  top: -8px;
+  left: -12px;
+  border-radius: 50%;
+  background: var(--lavender);
+  z-index: -1;
+}
+
+.ph img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 15px 38px -16px rgba(23, 43, 77, 0.35);
+}
+
+.tag {
+  position: absolute;
+  z-index: 2;
+  bottom: -7px;
+  right: -65px;
+  width: 155px;
+  background: var(--navy);
+  color: white;
+  padding: 10px 13px;
+  border-radius: 14px;
+  font: 500 0.78rem/1.45 'DM Sans', sans-serif;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(23, 43, 77, 0.12);
+}
+
+.eyebrow {
+  font: 600 0.72rem/1.5 'DM Sans', sans-serif;
+  letter-spacing: 0.12em;
+  color: var(--teal-dark);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font: 700 clamp(2.5rem, 6vw, 4.2rem)/1.08 'DM Sans', sans-serif;
+  color: var(--navy);
+  letter-spacing: -0.045em;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font: 400 clamp(1.2rem, 2.7vw, 1.75rem)/1.35 'DM Serif Display', Georgia, serif;
+  color: var(--teal-dark);
+  margin-bottom: 14px;
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  color: #44505E;
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  line-height: 1.75;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font: 500 0.92rem 'DM Sans', sans-serif;
+  text-decoration: none;
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.primary {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+
+/* Short screens: fit the hero into one viewport where possible */
+@media (min-width: 600px) and (min-height: 650px) {
+  body {
+    padding: 22px 32px;
+  }
+
+  .ph {
+    margin-bottom: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 24px 20px;
+  }
+
+  .ph {
+    width: 140px;
+    margin-bottom: 28px;
+  }
+
+  .tag {
+    right: -42px;
+    bottom: -8px;
+    width: 128px;
+    font-size: 0.72rem;
+    padding: 9px 11px;
+  }
+
+  .eyebrow {
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 10vw, 3rem);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .btns {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 17px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 481px) {
+  body {
+    padding: 14px 24px;
+  }
+
+  .ph {
+    width: 125px;
+    margin-bottom: 18px;
+  }
+
+  .ph::after {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 8px 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 5vw, 3.3rem);
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+</style>
+</head>
+
+<body>
+<main>
+
+  <div class="ph">
+    <img
+      src="assets/photo.jpg"
+      alt="Portrait of Ishita Mishra"
+      fetchpriority="high"
+    >
+
+  </div>
+
+  <p class="eyebrow">
+    PRODUCT MANAGEMENT · USER RESEARCH · CREATOR-LED GROWTH
+  </p>
+
+  <h1>Ishita Mishra</h1>
+
+  <h2>
+    I turn user insights into thoughtful product experiences.
+  </h2>
+
+  <p class="description">
+    An Information Science engineering student exploring the intersection
+    of user behaviour, product strategy, and design. I enjoy understanding
+    why people make decisions and translating those insights into better
+    product experiences.
+  </p>
+
+  <div class="btns">
+    <a class="btn primary" href="portfolio.html">
+      Enter my portfolio
+    </a>
+
+    <a
+      class="btn"
+      href="assets/resume/Ishita_Mishra_Resume.pdf"
+      target="_blank"
+      rel="noopener"
+    >
+      View Resume
+    </a>
+  </div>
+
+</main>
+</body>
+</html>
+```
